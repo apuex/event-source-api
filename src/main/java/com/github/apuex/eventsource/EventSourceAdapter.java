@@ -10,7 +10,7 @@ import java.util.Observable;
 public interface EventSourceAdapter {
   public void publish(Object event);
   public void publish(Object event, Principal principal);
-  public void publish(Object event, Principal principal, URI uri);
+  public void publish(Object event, Principal principal, URI service);
 
   /**
    * black-hole event source.
@@ -31,7 +31,7 @@ public interface EventSourceAdapter {
     }
 
     @Override
-    public void publish(Object event, Principal principal, URI uri) {
+    public void publish(Object event, Principal principal, URI service) {
       publish(event);
     }
   }
