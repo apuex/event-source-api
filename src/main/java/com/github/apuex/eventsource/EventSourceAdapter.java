@@ -1,5 +1,6 @@
 package com.github.apuex.eventsource;
 
+import java.net.URI;
 import java.security.Principal;
 import java.util.Observable;
 
@@ -9,6 +10,7 @@ import java.util.Observable;
 public interface EventSourceAdapter {
   public void publish(Object event);
   public void publish(Object event, Principal principal);
+  public void publish(Object event, Principal principal, URI uri);
 
   /**
    * black-hole event source.
@@ -25,6 +27,11 @@ public interface EventSourceAdapter {
 
     @Override
     public void publish(Object event, Principal principal) {
+      publish(event);
+    }
+
+    @Override
+    public void publish(Object event, Principal principal, URI uri) {
       publish(event);
     }
   }
