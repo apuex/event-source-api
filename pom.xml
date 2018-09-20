@@ -5,13 +5,13 @@
 
   <groupId>com.github.apuex.event-source</groupId>
   <artifactId>event-source-api</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
   <packaging>jar</packaging>
 
   <parent>
     <groupId>com.github.apuex.event-source</groupId>
     <artifactId>event-source</artifactId>
-    <version>1.0.2</version>
+    <version>1.0.1</version>
   </parent>
 
   <dependencies>
